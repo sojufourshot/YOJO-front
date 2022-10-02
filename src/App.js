@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
   return (
-    <div></div>
+    <div>규진 사랑해염</div>
   );
 }
 
