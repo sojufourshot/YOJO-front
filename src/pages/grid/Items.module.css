@@ -1,0 +1,23 @@
+.item {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+  }
+  
+.item_box {
+    width: 380px;
+    height: 380px;
+    border-radius: 10px;
+    margin-bottom: 16px;
+}
+  
+.item_box_img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.asd {
+    font-size: 40px;
+}
