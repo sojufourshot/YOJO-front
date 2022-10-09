@@ -1,0 +1,299 @@
+.header-container {
+	min-width: 1000px;
+	height: 230px;
+	padding-bottom: 20px;
+}
+.header-container .header-content {
+	padding-bottom: 8px;
+	height: 55%;
+}
+.header-container .header-content .header-top {
+	position: relative;
+	height: 100%;
+}
+.header-container .header-content .header-top .header-logo-box {
+	width: 120px;
+	height: 30px;
+	margin: 0;
+	padding: 29px 50px 0;
+}
+.header-container .header-content .header-top .header-logo-box .header-logo {
+	background-position: 0 -90px;
+	width: 90px;
+	height: 90px;
+	display: inline-block;
+	overflow: hidden;
+	background: url("../../assets/images/soju.jpeg") no-repeat;
+	background-size: 90px 90px;
+	vertical-align: top;
+	line-height: 100em;
+	outline: none;
+}
+.header-container .header-content .header-top .header-search-box {
+	position: relative;
+}
+.header-container .header-content .header-top .header-search-box .modal-body {
+	height: 300px;
+}
+.header-container .header-content .header-top .header-search-box .cancel-btn {
+	z-index: 1;
+}
+.header-container .header-content .header-top .header-search-box .header-search-btn {
+	top: 30px;
+	right: 40px;
+	width: 67px;
+	height: 67px;
+	padding: 10px;
+	overflow: hidden;
+	position: absolute;
+	border: 0;
+	background: transparent;
+	cursor: pointer;
+}
+.header-container .header-content .header-top .header-search-box .header-search-btn .header-search-span {
+	width: 50px;
+	height: 50px;
+	background-position: -75px -25px;
+	vertical-align: top;
+	display: inline-block;
+	overflow: hidden;
+	/* background: url("../../assets/images/search.png") no-repeat; */
+	background-size: 40px 40px;
+	vertical-align: top;
+	line-height: 100em;
+}
+.header-container .header-content .header-top .mini-menu {
+	position: absolute;
+	right: 50px;
+	top: 22px;
+	vertical-align: top;
+	list-style: none;
+}
+.header-container .header-content .header-top .mini-menu .mini-seller {
+	display: inline-block;
+	vertical-align: top;
+}
+.header-container .header-content .header-top .mini-menu .mini-seller .mini-seller-a {
+	position: relative;
+	display: inline-block;
+	height: 30px;
+	margin-left: 13px;
+	box-sizing: border-box;
+	text-align: center;
+	vertical-align: top;
+	line-height: 30px;
+}
+.header-container .header-content .header-top .mini-menu .mini-seller .mini-seller-a .mini-seller-span {
+	background-position: 0 0;
+	display: inline-block;
+	overflow: hidden;
+	width: 17px;
+	height: 17px;
+	margin-top: 5px;
+	margin-right: 5px;
+	/* background: url("../../assets/images/seller.png") no-repeat; */
+	background-size: 17px 17px;
+	vertical-align: top;
+	line-height: 100em;
+}
+.header-container .header-content .header-top .mini-menu .mini-seller .mini-seller-a .mini-seller-strong {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 auto;
+	font-size: 9px;
+	font-weight: 400;
+	line-height: 30px;
+}
+.header-container .header-content .header-top .mini-menu .mini-mypage {
+	display: inline-block;
+	vertical-align: top;
+}
+.header-container .header-content .header-top .mini-menu .mini-mypage .mini-mypage-a {
+	position: relative;
+	display: inline-block;
+	height: 30px;
+	margin-left: 13px;
+	box-sizing: border-box;
+	text-align: center;
+	vertical-align: top;
+	line-height: 30px;
+	text-decoration: none;
+}
+.header-container .header-content .header-top .mini-menu .mini-mypage .mini-mypage-a .mini-mypage-span {
+	background-position: -25px 1px;
+	display: inline-block;
+	overflow: hidden;
+	width: 17px;
+	height: 17px;
+	margin-top: 5px;
+	margin-right: 5px;
+	/* background: url("../../assets/images/mypage.png") no-repeat; */
+	background-size: 17px 17px;
+	vertical-align: top;
+	line-height: 100em;
+}
+.header-container .header-content .header-top .mini-menu .mini-mypage .mini-mypage-a .mini-mypage-strong {
+	margin: 0 auto;
+	font-size: 9px;
+	font-weight: 400;
+	line-height: 30px;
+}
+.header-container .header-content .header-top .mini-menu .mini-myheart {
+	display: inline-block;
+	vertical-align: top;
+}
+.header-container .header-content .header-top .mini-menu .mini-myheart .mini-myheart-a {
+	position: relative;
+	display: inline-block;
+	height: 30px;
+	margin-left: 13px;
+	box-sizing: border-box;
+	text-align: center;
+	vertical-align: top;
+	line-height: 30px;
+	text-decoration: none;
+}
+.header-container .header-content .header-top .mini-menu .mini-myheart .mini-myheart-a .mini-myheart-span {
+	background-position: -25px 1px;
+	display: inline-block;
+	overflow: hidden;
+	width: 17px;
+	height: 17px;
+	margin-top: 5px;
+	margin-right: 5px;
+	/* background: url("../../assets/images/heart.png") no-repeat; */
+	background-size: 17px 17px;
+	vertical-align: top;
+	line-height: 100em;
+}
+.header-container .header-content .header-top .mini-menu .mini-myheart .mini-myheart-a .mini-myheart-strong {
+	margin: 0 auto;
+	font-size: 9px;
+	font-weight: 400;
+	line-height: 30px;
+}
+.header-container .header-content .header-top .mini-menu .mini-shoppingbag {
+	display: inline-block;
+	vertical-align: top;
+}
+.header-container .header-content .header-top .mini-menu .mini-shoppingbag .mini-shoppingbag-a {
+	position: relative;
+	display: inline-block;
+	height: 30px;
+	margin-left: 13px;
+	box-sizing: border-box;
+	text-align: center;
+	vertical-align: top;
+	line-height: 30px;
+	text-decoration: none;
+}
+.header-container .header-content .header-top .mini-menu .mini-shoppingbag .mini-shoppingbag-a .mini-shoppingbag-span {
+	background-position: -25px 1px;
+	display: inline-block;
+	overflow: hidden;
+	width: 17px;
+	height: 17px;
+	margin-top: 5px;
+	margin-right: 5px;
+	/* background: url("../../assets/images/shopping-bag.png") no-repeat; */
+	background-size: 17px 17px;
+	vertical-align: top;
+	line-height: 100em;
+}
+.header-container .header-content .header-top .mini-menu .mini-shoppingbag .mini-shoppingbag-a .mini-shoppingbag-strong {
+	margin: 0 auto;
+	font-size: 9px;
+	font-weight: 400;
+	line-height: 30px;
+}
+.header-container .header-content .header-top .mini-menu .mini-login {
+	display: inline-block;
+	vertical-align: top;
+}
+.header-container .header-content .header-top .mini-menu .mini-login .mini-login-btn {
+	position: relative;
+	display: inline-block;
+	height: 30px;
+	margin-left: 13px;
+	box-sizing: border-box;
+	text-align: center;
+	vertical-align: top;
+	line-height: 30px;
+	border: 0;
+	background: transparent;
+	cursor: pointer;
+}
+.header-container .header-content .header-top .mini-menu .mini-login .mini-login-btn .mini-login-span {
+	display: inline-block;
+	overflow: hidden;
+	width: 17px;
+	height: 17px;
+	margin-top: 5px;
+	margin-right: 5px;
+	/* background: url("../../assets/images/login.png") no-repeat; */
+	background-size: 17px 17px;
+	vertical-align: top;
+	line-height: 100em;
+}
+.header-container .header-content .header-top .mini-menu .mini-login .mini-login-btn .mini-login-strong {
+	margin: 0 auto;
+	font-size: 9px;
+	font-weight: 400;
+	line-height: 30px;
+}
+.header-container .header-middle {
+	margin-right: 100px;
+	padding-top: 10px;
+	position: relative;
+}
+.header-container .header-middle .header-nav {
+	position: relative;
+	z-index: 50;
+}
+.header-container .header-middle .header-nav .header-nav-bar {
+	padding: 0 0 0 32px;
+	list-style: none;
+	margin: 0;
+}
+.header-container .header-middle .header-nav .header-nav-bar .header-nav-li {
+	font-size: 36px;
+	margin: 4px 10px 2px 15px;
+	display: inline-block;
+}
+.header-container .header-middle .header-nav .header-nav-bar .header-nav-li .header-nav-a {
+	display: inline-block;
+	position: relative;
+	font-weight: 900;
+	text-decoration: none;
+}
+.header-container .header-bottom {
+	padding: 0 50px;
+}
+.header-container .header-bottom .header-subnav {
+	display: flex;
+}
+.header-container .header-bottom .header-subnav .header-subnav-bar {
+	list-style: none;
+	padding: 0;
+}
+.header-container .header-bottom .header-subnav .header-subnav-bar .header-subnav-li {
+	padding-right: 22px;
+	float: left;
+	list-style: none;
+}
+.header-container .header-bottom .header-subnav .header-subnav-bar .header-subnav-li .header-subnav-a {
+	font-size: 14px;
+	cursor: pointer;
+	padding: 6px 0;
+	border-bottom: 4 px solid transparent;
+	font-weight: 600;
+	text-decoration: none;
+}
+.mini-shoppingbag-a,
+.mini-seller-a,
+.mini-myheart-a,
+.mini-mypage-a,
+.header-nav-a,
+.header-subnav-a {
+	color: black;
+}
