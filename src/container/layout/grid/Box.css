@@ -5,8 +5,8 @@
 }
 
 .item_box {
-	width: 380px;
-	height: 380px;
+	width: 150px;
+	height: 150px;
 	border-radius: 10px;
 	margin-bottom: 16px;
 }
@@ -18,6 +18,5 @@
 	border: 1px solid black;
 }
 
-.asd {
-	font-size: 40px;
-}
+
+
