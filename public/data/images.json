@@ -25,8 +25,52 @@
         "author": "Admin3",
         "content": "내용설명3",
         "src": "https://png.pngtree.com/png-clipart/20190115/ourlarge/pngtree-fitness-sports-girl-yoga-cartoon-character-png-image_346488.jpg"
-      }
+      },
 
+      {
+        "id": 4,
+
+        "title": "요가 1",
+        "author": "Admin",
+        "content": "내용설명1",
+        "src": "https://png.pngtree.com/png-clipart/20210414/ourlarge/pngtree-boss-meditation-yoga-illustration-png-image_3215173.jpg"
+      },
+
+      {
+        "id": 5,
+
+        "title": "요기 2",
+        "author": "Admin2",
+        "content": "내용설명2",
+        "src": "https://png.pngtree.com/png-vector/20220801/ourlarge/pngtree-young-businesswoman-leader-clerk-manager-sits-on-work-table-in-office-png-image_5878374.png"
+      },
+
+      {
+        "id": 6,
+
+        "title": "요기 3",
+        "author": "Admin3",
+        "content": "내용설명3",
+        "src": "https://png.pngtree.com/png-clipart/20190115/ourlarge/pngtree-fitness-sports-girl-yoga-cartoon-character-png-image_346488.jpg"
+      },
+
+      {
+        "id": 7,
+
+        "title": "요가 1",
+        "author": "Admin",
+        "content": "내용설명1",
+        "src": "https://png.pngtree.com/png-clipart/20210414/ourlarge/pngtree-boss-meditation-yoga-illustration-png-image_3215173.jpg"
+      },
+
+      {
+        "id": 8,
+
+        "title": "요기 2",
+        "author": "Admin2",
+        "content": "내용설명2",
+        "src": "https://png.pngtree.com/png-vector/20220801/ourlarge/pngtree-young-businesswoman-leader-clerk-manager-sits-on-work-table-in-office-png-image_5878374.png"
+      }
 
       
      

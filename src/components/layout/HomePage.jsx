@@ -1,11 +1,20 @@
 import React from "react";
 import "./homepage.css";
 
+import  Container_official from "../../container/layout/Container_official";
+
+
 const HomePage = () => {
+
+
 	return (
 		<div>
 			<div className="homepage-container">
-				<h1>메인입니다.</h1>
+
+				<Container_official></Container_official>
+
+	
+
 			</div>
 		</div>
 	);

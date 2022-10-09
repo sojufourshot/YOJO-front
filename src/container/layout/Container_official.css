@@ -1,0 +1,17 @@
+.main_content_background{
+	background-color:  #e7e1e18c;
+	display: block;
+  }
+  
+  .main_content{
+  
+	max-width: 1440px;
+	display: grid;
+	grid-template-columns: repeat(8, 1fr); 
+	place-items: center;
+	gap: 10px 10px;
+	margin: 0 auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+  
+  }
