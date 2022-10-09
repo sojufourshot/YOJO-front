@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
 }
@@ -27,6 +28,46 @@
 .App-link {
   color: #61dafb;
 }
+
+.header{
+  display: flex;
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  display: block;
+  background-color: #61dafb;  
+
+}
+
+.footer{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    display: block;
+    background-color: #61dafb;  
+  
+}
+
+.main_content_background{
+  background-color:  #e7e1e18c;
+}
+
+.main_content{
+
+  max-width: 1440px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  place-items: center;
+  gap: 70px 10px;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+
+
+
 
 @keyframes App-logo-spin {
   from {
