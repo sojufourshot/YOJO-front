@@ -3,6 +3,7 @@ footer {
 	position: relative;
 	transform: translateY(0%);
 	display: flex;
+	
 }
 footer a {
 	text-decoration: none;
@@ -23,7 +24,7 @@ footer .footer-container .footer-btn-box .black-sm-btn {
 	padding: 5px 14px;
 	border-radius: 2px;
 	background: #303033;
-	font-size: 15px;
+	font-size: 12px;
 	color: #fff;
 	line-height: 50px;
 	width: 100px;

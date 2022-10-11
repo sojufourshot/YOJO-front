@@ -1,15 +1,12 @@
 import React, { useEffect, useState, Component } from "react";
-import "./Container_official.css";
+import "../../style/Pose.css";
 
 import axios from "axios";
+import  Box from "./Box";
 
 
 
-import  Box from "./grid/Box";
-
-
-
-const Container_official = () => {
+const Pose = () => {
 
 
 
@@ -38,4 +35,4 @@ const Container_official = () => {
 	);
 };
 
-export default Container_official;
+export default Pose;

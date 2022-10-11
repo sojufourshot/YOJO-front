@@ -1,5 +1,5 @@
 import React from "react";
-import "./Box.css";
+import "../../style/Box.css";
 
 	const Box = ({ item }) => {
 		const { id, title, author, content, src } = item;
