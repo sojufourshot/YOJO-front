@@ -1,0 +1,116 @@
+.info_background{
+	background-color:rgba(255, 0, 0, 0.067);
+	height: 1000px;
+	
+
+	/* display: flex;
+  	justify-content: center;
+  	align-items:center; 
+	중앙배치 */
+	
+	
+	
+}
+
+.info_section1 {
+	height: 800px;
+	display: flex;
+  	justify-content: center;
+  	align-items:center;
+	
+	
+	
+
+}
+
+.info_section1 .section1_part1{
+	width: 50%;
+	height: 100%;
+	float: left;
+	border: 1px solid black;
+	margin: auto;
+
+	display: flex;
+  	justify-content: center;
+  	align-items:center; 
+	
+	
+	padding: 10px
+	
+
+
+}
+
+.info_section1 .section1_part2{
+	width: 50%;
+	height: 100%;
+	float: left;
+	border: 1px solid black;
+	margin: auto;
+	
+	padding: 10px
+	
+
+
+}
+
+.info_section1 .section1_part2 .info_author{
+
+	height: 20%;
+	width: 100%;
+	
+	font-size: 30px;
+	text-align: right;
+	border-bottom: 1px solid black;
+	
+
+	
+}
+
+.info_section1 .section1_part2 .info_content{
+
+	height: 80%;
+	width: 100%;
+	
+}
+
+.info_section2 {
+	height: 200px;
+	width: 50%;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: auto;
+	
+}
+
+.btn_evaluate{
+	border-radius: 5px;
+	width: 30%;
+	height: 30%;
+	background-color: white;
+	border: none;
+}
+
+.btn_result{
+	border-radius: 5px;
+	width: 30%;
+	height: 30%;
+	background-color: white;
+	border: none;
+
+}
+
+.btn_cancel{
+	border-radius: 5px;
+	width: 30%;
+	height: 30%;
+	background-color: white;
+	border: none;
+	
+}
+
+
+
+

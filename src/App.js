@@ -7,6 +7,8 @@ import HomePage from "./components/layout/HomePage";
 import PATH from "./constants/Path";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Pose from "./pages/pose/Pose";
+import Info from "./pages/infomation/Info";
+
 
 
 
@@ -19,7 +21,8 @@ function App() {
 					<Route element={<Layout />}>
 						<Route index element={<HomePage />} />
 						<Route path="/*" element={<HomePage />} />
-						<Route path="/evaluate/1" element={<Pose/>} />
+						<Route path="/evaluate" element={<Pose/>} />
+						<Route path="/evaluate/info/:id" element={<Info/>} />
 					</Route>
 				</Routes>
 			</Router>
