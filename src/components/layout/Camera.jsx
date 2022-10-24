@@ -12,11 +12,12 @@ const videoConstraints = {
 }
 
 function Camera({ style, func, id }) {
+	let temp = []
 	const canvas = useRef(null)
-	const [ctx, setCtx] = useState(undefined)
+	const [ctx, setCtx] = useState(null)
 	const [ratio, setRatio] = useState(0.1)
 	const [second, setSecond] = useState(-1)
-	const [img, setImg] = useState(undefined)
+	const [img, setImg] = useState(null)
 	const [flag, setFlag] = useState(false)
 	const [cap, setCap] = useState(false)
 	const [data, setData] = useState([])
@@ -31,30 +32,38 @@ function Camera({ style, func, id }) {
 	}, [webcamRef])
 
 	useEffect(() => {
+		console.log('id', id)
 		setCtx(canvas.current.getContext('2d'))
+		fetch(`http://203.252.166.225:5500/api/v1/cam/${id}`, {
+			method: 'GET',
+			headers: {
+				Accept: 'application/json',
+				'Content-Type': 'application/json',
+			},
+		})
+			.then(res => res.json())
+			.then(res => {
+				// console.log('res')
+				// console.log(res)
+				// console.log(res.keypoints)
+				// console.log(res.width)
+				// console.log(res.height)
+				const pos = res.keypoints
+				const w = res.width
+				const h = res.height
+				const r = w / h
+				for (var i = 0; i < pos.length; i++) {
+					pos[i][0] *= r
+				}
+				console.log(temp)
+				setData([])
+			})
+			.catch(err => {
+				console.log(err)
+			})
 	}, [])
 
 	useEffect(() => {
-		setData([
-			[0.7669271388820778, 0.13430099259122655],
-			[0.779948024285771, 0.11369824694503596],
-			[0.7539063344298752, 0.11369824694503596],
-			[0.7018229547180836, 0.10339685811082945],
-			[0.6888021502658811, 0.10339685811082945],
-			[0.6757813458136787, 0.22701342805464023],
-			[0.5976562762459912, 0.20641068240844962],
-			[0.7539063344298752, 0.3815341324788481],
-			[0.4283854136099046, 0.330027220330038],
-			[0.8841147027578635, 0.4845479567764682],
-			[0.4153646091577022, 0.47424659996448415],
-			[0.5455729774856904, 0.4845479567764682],
-			[0.5976562762459912, 0.4845479567764682],
-			[0.4153646091577022, 0.7111783189956767],
-			[0.779948024285771, 0.6802741845152797],
-			[0.11588541866937282, 0.7111783189956767],
-			[0.8320313230460719, 0.9481100380268694],
-			[0.636718811029835, 0.21671205523154494],
-		])
 		const seq = [
 			[0, 17],
 			[17, 6],
@@ -71,10 +80,12 @@ function Camera({ style, func, id }) {
 			[13, 15],
 		]
 
-		if (ctx !== undefined) {
+		console.log(">>", temp)
+		if (ctx !== null && data !== []) {
 			ctx.clearRect(0, 0, width, height)
 			ctx.strokeStyle = 'red'
 			ctx.lineWidth = 3
+
 			for (let i = 0; i < seq.length; i++) {
 				const start = seq[i][0],
 					end = seq[i][1]
@@ -89,7 +100,7 @@ function Camera({ style, func, id }) {
 				ctx.stroke()
 			}
 		}
-	}, [ctx, ratio])
+	}, [ctx, ratio, data])
 
 	useEffect(() => {
 		if (second === -1) return
@@ -110,7 +121,7 @@ function Camera({ style, func, id }) {
 	}, [second])
 
 	useEffect(() => {
-		if (img !== undefined) {
+		if (img !== null) {
 			// fetch('http://localhost:8000', {
 			// 	method: 'POST',
 			// 	headers: {
