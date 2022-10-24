@@ -1,5 +1,5 @@
 import React, { useEffect, useState, Component } from "react";
-import { useLocation, useNavigate  } from 'react-router-dom'
+import { useLocation, useNavigate ,Link } from 'react-router-dom'
 import "../../style/Info.css"
 
 
@@ -18,6 +18,28 @@ const Info = () =>{
     }
 
     const nav = useNavigate();
+
+    const cam =() =>{
+
+        return(
+
+            <Link to={`/cam/${pose_Info.id}`} state={{pose_Info}}>
+					
+            </Link>
+        )
+
+    }
+
+    const result =() =>{
+
+        return(
+
+            <Link to={`/evaluate/info/${pose_Info.id}/result`} state={{pose_Info}}>
+					
+            </Link>
+        )
+
+    }
       
 
 
@@ -26,6 +48,10 @@ const Info = () =>{
 
         <div className="info_background">
             <section className="info_section1">
+
+                <div className="info_title">
+                    {pose_Info.title}
+                </div>
 
                 <div className="section1_part1">
                     <img className="info_img" src={pose_Info.src} />
@@ -40,8 +66,13 @@ const Info = () =>{
 
             <section className="info_section2">
 
+                <Link to={`/cam/${pose_Info.id}`} state={{pose_Info}}>
+                <button className="btn_cam">촬영하기</button>
+                </Link>
                 <button className="btn_evaluate">자세평가</button>
+                <Link to={`/evaluate/info/${pose_Info.id}/result`} state={{pose_Info}}>
                 <button className="btn_result">결과확인</button>
+                </Link>
                 <button className="btn_cancel" onClick={()=>nav(-1) }>취소</button>
                 
                 

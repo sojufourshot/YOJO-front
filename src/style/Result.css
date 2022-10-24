@@ -1,0 +1,16 @@
+.result_content_background{
+	background-color:rgba(197, 121, 172, 0.24);
+	height: 1000px;
+	
+}
+  
+.result_content{
+  
+	display: grid;
+	grid-template-columns: repeat(6, 1fr); 
+	place-items: center;
+	gap: 10px 10px;
+	margin: 0 auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
