@@ -1,8 +1,36 @@
-.cam_background{
-	background-color:rgba(151, 171, 235, 0.76);
+.background {
 	height: 1000px;
-	
+	width: 70%;
+	margin: 0 auto;
+	z-index: -20;
+}
 
-	
-	
+.title{
+	font-weight: 700;
+	font-size : 30px;
+	margin-left : 30px;
+}
+
+.image{
+	display:flex;
+	justify-content: center;
+}
+
+.buttonSet{
+	display:flex;
+	justify-content: center;
+	margin-top : 10px;
+	padding: 10px;
+}
+
+.msg{
+	display:flex;
+	justify-content: center;
+	margin : 10px;
+	font-size : 25px;
+}
+
+.button{
+	margin : 10px;
+	width : 25%;
 }
