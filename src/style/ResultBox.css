@@ -1,0 +1,32 @@
+.R_item {
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	margin: 10px;
+	text-align: center;
+	background-color: azure;
+	border-radius: 10px;
+
+}
+.R_item_text{
+	width: 100%;
+	font-size: 20px;
+}
+
+.R_item_box {
+	width: 400px;
+	margin-top: 30px;
+	height: 400px;
+	border-radius: 10px;
+	
+}
+
+.R_item_box_img {
+	width: 80%;
+	height: 80%;
+	border-radius: 10px;
+	border: 1px solid black;
+}
+
+
+

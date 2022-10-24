@@ -25,7 +25,7 @@ const Pose = () => {
 				<div className="main_content">
 
 					{items.map((item) => {
-						return <Box key={`key-${item.id}`} item={item} />;
+						return <Box key={`${item.id}`} item={item} />;
 					})}
 
 					
