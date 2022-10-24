@@ -51,7 +51,7 @@ function Camera({ style, func, id }) {
 				const pos = res.keypoints;
 				const w = res.width;
 				const h = res.height;
-				const r = w / h;
+				const r = h / w;
 				for (var i = 0; i < pos.length; i++) {
 					pos[i][0] *= r;
 				}
@@ -83,7 +83,6 @@ function Camera({ style, func, id }) {
 			ctx.clearRect(0, 0, width, height);
 			ctx.strokeStyle = "red";
 			ctx.lineWidth = 3;
-
 			for (let i = 0; i < seq.length; i++) {
 				const start = seq[i][0],
 					end = seq[i][1];
@@ -98,7 +97,7 @@ function Camera({ style, func, id }) {
 				ctx.stroke();
 			}
 		}
-	}, [data]);
+	}, [data, ratio]);
 
 	useEffect(() => {
 		if (second === -1) return;
@@ -150,6 +149,7 @@ function Camera({ style, func, id }) {
 				</div>
 				<Slider
 					style={{ width: width, margin: "20px" }}
+					value={ratio}
 					defaultValue={ratio}
 					onChange={(e, value) => {
 						setRatio(value);
