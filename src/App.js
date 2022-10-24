@@ -7,17 +7,10 @@ import HomePage from "./components/layout/HomePage";
 import PATH from "./constants/Path";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Pose from "./pages/pose/Pose";
-<<<<<<< HEAD
 import Info from "./pages/infomation/Info";
-
 import Cam from "./pages/cam/Cam";
 import Result from "./pages/result/Result";
-
-
-
-=======
 import UploadPage from "./pages/evaluate/UploadPage";
->>>>>>> c6a22a5e9b8d2039e8b431926b439a903ca83633
 
 function App() {
 	return (
@@ -27,15 +20,12 @@ function App() {
 					<Route element={<Layout />}>
 						<Route index element={<HomePage />} />
 						<Route path="/*" element={<HomePage />} />
-<<<<<<< HEAD
-						<Route path="/evaluate" element={<Pose/>} />
-						<Route path="/evaluate/info/:id" element={<Info/>} />
-						<Route path="/cam/:id" element={<Cam/>} />
-						<Route path="/evaluate/info/:id/result" element={<Result/>} />
-=======
+						<Route path="/evaluate" element={<Pose />} />
+						<Route path="/evaluate/info/:id" element={<Info />} />
+						<Route path="/cam/:id" element={<Cam />} />
+						<Route path="/evaluate/info/:id/result" element={<Result />} />
 						<Route path="/evaluate/1" element={<Pose />} />
 						<Route path="/evaluate/upload" element={<UploadPage></UploadPage>} />
->>>>>>> c6a22a5e9b8d2039e8b431926b439a903ca83633
 					</Route>
 				</Routes>
 			</Router>
