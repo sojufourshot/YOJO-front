@@ -2,8 +2,6 @@ import React, { useEffect, useState, Component } from "react";
 import { useLocation, useNavigate ,Link } from 'react-router-dom'
 import "../../style/Info.css"
 
-
-
 const Info = () =>{
 
     const location = useLocation();
@@ -19,29 +17,19 @@ const Info = () =>{
 
     const nav = useNavigate();
 
-    const cam =() =>{
+    const nav_cam= () =>{
 
-        return(
-
-            <Link to={`/cam/${pose_Info.id}`} state={{pose_Info}}>
-					
-            </Link>
-        )
+        nav(`/cam/${pose_Info.id}`);
 
     }
 
-    const result =() =>{
+    const nav_result= () =>{
 
-        return(
-
-            <Link to={`/evaluate/info/${pose_Info.id}/result`} state={{pose_Info}}>
-					
-            </Link>
-        )
+        nav(`/evaluate/info/${pose_Info.id}/result`);
 
     }
-      
 
+  
 
 
     return(
@@ -67,14 +55,14 @@ const Info = () =>{
             <section className="info_section2">
 
             
-                <button className="btn_cam">
-                    <Link to={`/cam/${pose_Info.id}`} state={{pose_Info}}>촬영하기</Link>
+                <button className="btn_cam" onClick={nav_cam}>
+                촬영하기
                 </button>
             
                 <button className="btn_evaluate">자세평가</button>
                 
-                <button className="btn_result">
-                <Link to={`/evaluate/info/${pose_Info.id}/result`} state={{pose_Info}}>결과확인</Link>
+                <button className="btn_result" onClick={nav_result}>
+                결과확인
                 </button>
                 
                 <button className="btn_cancel" onClick={()=>nav(-1) }>취소</button>
