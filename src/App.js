@@ -25,7 +25,7 @@ function App() {
 						<Route path="/*" element={<HomePage />} />
 						<Route path="/evaluate" element={<Pose/>} />
 						<Route path="/evaluate/info/:id" element={<Info/>} />
-						<Route path="/cam" element={<Cam/>} />
+						<Route path="/cam/:id" element={<Cam/>} />
 					</Route>
 				</Routes>
 			</Router>

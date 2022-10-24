@@ -1,20 +1,22 @@
 import React, { useState } from 'react'
+import { useParams } from 'react-router-dom'
 import Button from '@mui/material/Button'
 import '../../style/Cam.css'
 import Camera from '../../components/layout/Camera'
 
 const Cam = () => {
-	const title = '자세 1'
+	const { id } = useParams()
+	const title = `자세 ${id}`
 	const [img, setImg] = useState('')
-	const send = ()=>{
-		console.log("send")
+	const send = () => {
+		console.log('send')
 	}
 	return (
 		<div className="background">
 			<div className="title">{title}</div>
 			<hr />
 			{img === '' ? (
-				<Camera func={image => setImg(image)} />
+				<Camera id = {id} func={image => setImg(image)} />
 			) : (
 				<div>
 					<div className="image">
@@ -32,7 +34,14 @@ const Cam = () => {
 						>
 							취소
 						</Button>
-						<Button onClick={()=>{send()}} sx={{ m: 0.5 }} className="button" variant="contained">
+						<Button
+							onClick={() => {
+								send()
+							}}
+							sx={{ m: 0.5 }}
+							className="button"
+							variant="contained"
+						>
 							전송
 						</Button>
 					</div>

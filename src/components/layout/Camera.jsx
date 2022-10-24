@@ -11,7 +11,7 @@ const videoConstraints = {
 	facingMode: 'user',
 }
 
-function Camera({ style, func }) {
+function Camera({ style, func, id }) {
 	const canvas = useRef(null)
 	const [ctx, setCtx] = useState(undefined)
 	const [ratio, setRatio] = useState(0.1)
@@ -19,6 +19,7 @@ function Camera({ style, func }) {
 	const [img, setImg] = useState(undefined)
 	const [flag, setFlag] = useState(false)
 	const [cap, setCap] = useState(false)
+	const [data, setData] = useState([])
 	const webcamRef = useRef(null)
 	// div size
 	const width = 640
@@ -34,7 +35,7 @@ function Camera({ style, func }) {
 	}, [])
 
 	useEffect(() => {
-		const data = [
+		setData([
 			[0.7669271388820778, 0.13430099259122655],
 			[0.779948024285771, 0.11369824694503596],
 			[0.7539063344298752, 0.11369824694503596],
@@ -53,7 +54,7 @@ function Camera({ style, func }) {
 			[0.11588541866937282, 0.7111783189956767],
 			[0.8320313230460719, 0.9481100380268694],
 			[0.636718811029835, 0.21671205523154494],
-		]
+		])
 		const seq = [
 			[0, 17],
 			[17, 6],
@@ -72,7 +73,7 @@ function Camera({ style, func }) {
 
 		if (ctx !== undefined) {
 			ctx.clearRect(0, 0, width, height)
-			ctx.strokeStyle = "red"
+			ctx.strokeStyle = 'red'
 			ctx.lineWidth = 3
 			for (let i = 0; i < seq.length; i++) {
 				const start = seq[i][0],
@@ -133,7 +134,7 @@ function Camera({ style, func }) {
 	return (
 		<div>
 			<div className="container">
-				<img style={{ margin: 10 }} src="http://yojo.riroan.com/images/orig/2.jpg" alt="alt" width={(width * 2) / 3} height={(height * 2) / 3} />
+				<img style={{ margin: 10 }} src={`http://yojo.riroan.com/images/orig/${id}.jpg`} alt="alt" width={(width * 2) / 3} height={(height * 2) / 3} />
 				<div style={{ display: 'flex', position: 'relative' }}>
 					<canvas className={cap ? 'captured' : 'uncaptured'} ref={canvas} width={width} height={height} />
 					<Webcam
@@ -159,10 +160,10 @@ function Camera({ style, func }) {
 				/>
 				<Button
 					className="button"
-                    disabled={second!==-1}
+					disabled={second !== -1}
 					style={{ display: 'block', width: width, marginTop: 10, marginBottom: 10 }}
 					onClick={() => {
-						setSecond(2)
+						setSecond(5)
 						setFlag(true)
 					}}
 					variant="contained"
