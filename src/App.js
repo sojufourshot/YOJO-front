@@ -9,6 +9,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Pose from "./pages/pose/Pose";
 import Info from "./pages/infomation/Info";
 
+import Cam from "./pages/cam/Cam";
+
 
 
 
@@ -23,6 +25,7 @@ function App() {
 						<Route path="/*" element={<HomePage />} />
 						<Route path="/evaluate" element={<Pose/>} />
 						<Route path="/evaluate/info/:id" element={<Info/>} />
+						<Route path="/cam/:id" element={<Cam/>} />
 					</Route>
 				</Routes>
 			</Router>
