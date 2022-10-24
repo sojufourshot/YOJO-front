@@ -1,11 +1,22 @@
 .result_content_background{
 	background-color:rgba(197, 121, 172, 0.24);
 	height: 1000px;
+	display: block;
+}
+.result_title{
+	height: 10%;
+	width: 100%;
+	display: flex;
+  	justify-content: center;
+  	align-items:center; 
 	
+	font-size: 40px;
+	border-bottom: 1px solid black;
 }
   
 .result_content{
-  
+  	
+	width: 100%;
 	display: grid;
 	grid-template-columns: repeat(6, 1fr); 
 	place-items: center;

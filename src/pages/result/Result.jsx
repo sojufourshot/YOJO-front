@@ -1,4 +1,5 @@
 import React, { useEffect, useState, Component } from "react";
+import { useLocation } from 'react-router-dom'
 
 import "../../style/Result.css";
 import axios from "axios";
@@ -9,6 +10,17 @@ import  ResultBox from "./ResultBox";
 
 
 const Result = () => {
+
+	const { state } = useLocation();
+    console.log(state);
+
+	const pose_Info={
+        id:state.id,
+        title:state.title,
+        author:state.author,
+        content:state.content,
+        src:state.src
+    }
 
 
 
@@ -24,8 +36,12 @@ const Result = () => {
 	return (
 		<div>
 			<div className="result_content_background">
-				<div className="result_content">
 
+				<div className="result_title">
+						{pose_Info.title}
+				</div>
+				
+				<div className="result_content">
 					{items.map((item) => {
 						return <ResultBox key={`${item.id}`} item={item} />;
 					})}

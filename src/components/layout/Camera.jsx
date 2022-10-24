@@ -11,6 +11,7 @@ const videoConstraints = {
 	facingMode: 'user',
 }
 
+
 function Camera({ style, func, id }) {
 	const canvas = useRef(null)
 	const [ctx, setCtx] = useState(undefined)

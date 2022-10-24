@@ -25,7 +25,7 @@ const Info = () =>{
 
     const nav_result= () =>{
 
-        nav(`/evaluate/info/${pose_Info.id}/result`);
+        nav(`/evaluate/info/${pose_Info.id}/result`,{state:pose_Info});
 
     }
 
@@ -55,17 +55,17 @@ const Info = () =>{
             <section className="info_section2">
 
             
-                <button className="btn_cam" onClick={nav_cam}>
+                <button className="btn" onClick={nav_cam}>
                 촬영하기
                 </button>
             
-                <button className="btn_evaluate">자세평가</button>
+                <button className="btn">이미지 업로드</button>
                 
-                <button className="btn_result" onClick={nav_result}>
+                <button className="btn" onClick={nav_result}>
                 결과확인
                 </button>
                 
-                <button className="btn_cancel" onClick={()=>nav(-1) }>취소</button>
+                <button className="btn" onClick={()=>nav(-1) }>취소</button>
                 
                 
             </section>

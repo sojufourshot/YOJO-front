@@ -105,7 +105,7 @@
 
 .info_section2 {
 	height: 10%;
-	width: 50%;
+	width: 80%;
 
 	
 
@@ -116,46 +116,15 @@
 	
 }
 
-.info_section2 .btn_cam{
+.info_section2 .btn{
 	border-radius: 5px;
-	width: 25%;
-	height: 40%;
-
-	border: 1px solid black;
-
-	padding: 10px;
-	
-}
-
-.info_section2 .btn_evaluate{
-	border-radius: 5px;
-	width: 25%;
-	height: 40%;
-
-	border: 1px solid black;
-
-	padding: 10px;
-	
-}
-
-.info_section2 .btn_result{
-	border-radius: 5px;
-	width: 25%;
+	width: 20%;
 	height: 40%;
 
 	border: 1px solid black;
 	
 	
 
-}
-
-.info_section2 .btn_cancel{
-	border-radius: 5px;
-	width: 25%;
-	height: 40%;
-
-	border: 1px solid black;
-	
 	
 	
 }

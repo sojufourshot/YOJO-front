@@ -1,15 +1,20 @@
 import React, { useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams,useNavigate } from 'react-router-dom'
 import Button from '@mui/material/Button'
 import '../../style/Cam.css'
 import Camera from '../../components/layout/Camera'
 
 const Cam = () => {
+
+	const nav = useNavigate();
 	const { id } = useParams()
 	const title = `자세 ${id}`
 	const [img, setImg] = useState('')
+	
 	const send = () => {
-		console.log('send')
+
+		console.log(img);//img= 지금 찍은 사진 링크
+		nav(`/`);
 	}
 	return (
 		<div className="background">
