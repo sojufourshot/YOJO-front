@@ -10,6 +10,7 @@ import Pose from "./pages/pose/Pose";
 import Info from "./pages/infomation/Info";
 
 import Cam from "./pages/cam/Cam";
+import Result from "./pages/result/Result";
 
 
 
@@ -26,6 +27,7 @@ function App() {
 						<Route path="/evaluate" element={<Pose/>} />
 						<Route path="/evaluate/info/:id" element={<Info/>} />
 						<Route path="/cam/:id" element={<Cam/>} />
+						<Route path="/evaluate/info/:id/result" element={<Result/>} />
 					</Route>
 				</Routes>
 			</Router>

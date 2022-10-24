@@ -66,13 +66,17 @@ const Info = () =>{
 
             <section className="info_section2">
 
-                <Link to={`/cam/${pose_Info.id}`} state={{pose_Info}}>
-                <button className="btn_cam">촬영하기</button>
-                </Link>
+            
+                <button className="btn_cam">
+                    <Link to={`/cam/${pose_Info.id}`} state={{pose_Info}}>촬영하기</Link>
+                </button>
+            
                 <button className="btn_evaluate">자세평가</button>
-                <Link to={`/evaluate/info/${pose_Info.id}/result`} state={{pose_Info}}>
-                <button className="btn_result">결과확인</button>
-                </Link>
+                
+                <button className="btn_result">
+                <Link to={`/evaluate/info/${pose_Info.id}/result`} state={{pose_Info}}>결과확인</Link>
+                </button>
+                
                 <button className="btn_cancel" onClick={()=>nav(-1) }>취소</button>
                 
                 
