@@ -50,7 +50,7 @@ function Camera({ func, id }) {
 	useEffect(() => {
 		console.log('id', id)
 		setCtx(canvas.current.getContext('2d'))
-		fetch(`http://203.252.166.225:5500/api/v1/cam/${id}`, {
+		fetch(`http://yojo.riroan.com/api/v1/cam/${id}`, {
 			method: 'GET',
 			headers: {
 				Accept: 'application/json',
@@ -64,7 +64,7 @@ function Camera({ func, id }) {
 				setH(res.height)
 				// w = res.width
 				// h = res.height
-				
+
 				let r = 1
 				if (res.width > res.height) r = res.height / res.width
 				else r = res.width / res.height
