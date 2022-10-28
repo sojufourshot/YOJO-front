@@ -133,16 +133,16 @@ const Header = () => {
 				<div className="header-subnav">
 					<ul className="header-subnav-bar">
 						<li className="header-subnav-li">
-							<Link className="header-subnav-a" to={PATH.PRODUCTS + "/all"}>
+							<Link className="header-subnav-a" to={"/about"}>
 								ABOUT
 							</Link>
 						</li>
 						<li className="header-subnav-li">
-							<Link className="header-subnav-a" to={PATH.PRODUCTS + "/1"} state={{ cname: "상의" }}>
+							<Link className="header-subnav-a" to={"evaluate/1"}>
 								YOJO
 							</Link>
 						</li>
-						<li className="header-subnav-li">
+						{/* <li className="header-subnav-li">
 							<Link className="header-subnav-a" to={PATH.PRODUCTS + "/2"} state={{ cname: "하의" }}>
 								AI CHECK
 							</Link>
@@ -161,7 +161,7 @@ const Header = () => {
 							<Link className="header-subnav-a" to={PATH.PRODUCTS + "/4"} state={{ cname: "액세서리" }}>
 								YOGA
 							</Link>
-						</li>
+						</li> */}
 					</ul>
 				</div>
 			</div>

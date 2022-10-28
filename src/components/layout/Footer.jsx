@@ -46,7 +46,7 @@ const Footer = () => {
 							</span>
 						</a>
 					</div>
-					<div className="footer-value-text">{footerValue.operTime}</div>
+					{/* <div className="footer-value-text">{footerValue.operTime}</div> */}
 				</div>
 				<div className="footer-info-container">
 					<div className="footer-documentation-box">
