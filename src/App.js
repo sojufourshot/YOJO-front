@@ -11,6 +11,7 @@ import Info from "./pages/infomation/Info";
 import Cam from "./pages/cam/Cam";
 import Result from "./pages/result/Result";
 import UploadPage from "./pages/evaluate/UploadPage";
+import Compare from "./pages/compare/Compare";
 import About from "./pages/about/About";
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
 						<Route path="/evaluate/info/:id/result" element={<Result />} />
 						<Route path="/evaluate/1" element={<Pose />} />
 						<Route path="/evaluate/upload" element={<UploadPage></UploadPage>} />
+						<Route path="/evaluate/info/:parent_id/result/:id" element={<Compare />} />
 					</Route>
 				</Routes>
 			</Router>

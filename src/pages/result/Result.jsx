@@ -12,8 +12,7 @@ import  ResultBox from "./ResultBox";
 const Result = () => {
 
 	const { state } = useLocation();
-    console.log(state);
-
+	
 	const pose_Info={
         id:state.id,
         title:state.title,
@@ -43,7 +42,7 @@ const Result = () => {
 				
 				<div className="result_content">
 					{items.map((item) => {
-						return <ResultBox key={`${item.id}`} item={item} />;
+						return <ResultBox key={`${item.id}`} item={item} parent_id={pose_Info.id} parent_src={pose_Info.src} />;
 					})}
 
 					
