@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import "../../style/uploadpage.css";
 import { Button } from "@mui/material";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 const UploadPage = () => {
@@ -49,11 +50,11 @@ const UploadPage = () => {
 		if (image.image_file) {
 			const formData = new FormData();
 			formData.append("image", image.image_file);
-			formData.append("poseType", "");
-			formData.append("poseName", "");
+			formData.append("poseType", "cobra");
+			formData.append("poseName", "cobra");
 			console.log(formData); // FormData {}
 			for (const keyValue of formData) console.log(keyValue); // ["img", File] File은 객체
-			await axios.post("http://yojo.riroan.com/api/v1/images", formData);
+			await axios.post("http://localhost:5500/api/v1/images", formData);
 			alert("서버에 등록이 완료되었습니다!");
 			setImage({
 				image_file: "",
