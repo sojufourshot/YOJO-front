@@ -12,6 +12,7 @@ import Cam from "./pages/cam/Cam";
 import Result from "./pages/result/Result";
 import UploadPage from "./pages/evaluate/UploadPage";
 import Compare from "./pages/compare/Compare";
+import About from "./pages/about/About";
 
 function App() {
 	return (
@@ -21,6 +22,7 @@ function App() {
 					<Route element={<Layout />}>
 						<Route index element={<HomePage />} />
 						<Route path="/*" element={<HomePage />} />
+						<Route path="/about" element={<About />} />
 						<Route path="/evaluate" element={<Pose />} />
 						<Route path="/evaluate/info/:id" element={<Info />} />
 						<Route path="/cam/:id" element={<Cam />} />
