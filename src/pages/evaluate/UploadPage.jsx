@@ -53,7 +53,7 @@ const UploadPage = () => {
 			formData.append("poseName", "");
 			console.log(formData); // FormData {}
 			for (const keyValue of formData) console.log(keyValue); // ["img", File] File은 객체
-			await axios.post("/api/evaluate/upload", formData);
+			await axios.post("http://yojo.riroan.com/api/v1/images", formData);
 			alert("서버에 등록이 완료되었습니다!");
 			setImage({
 				image_file: "",
