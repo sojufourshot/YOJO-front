@@ -1,16 +1,24 @@
 .main_content_background{
-	background-color:rgb(235, 245, 255);
-	
+
+	border-top: 5px solid ;
+	border-bottom: 5px solid;
+	border-image: linear-gradient(to right, #f6f881be, #ffa1e9aa, #84dcffaa);
+    border-image-slice: 1;
+
+	margin-bottom: 10px;
+	padding: 20px;
 	
 }
   
 .main_content{
-  
+	background-color:rgb(255, 255, 255);
+	min-width: 1000px;
 	display: grid;
-	grid-template-columns: repeat(6, 1fr); 
+	grid-template-columns: repeat(4, 1fr); 
 	place-items: center;
-	gap: 10px 10px;
+	gap: 50px 10px;
+
+	padding: 20px;
 	margin: 0 auto;
-	margin-top: 10px;
-	margin-bottom: 10px;
+
 }

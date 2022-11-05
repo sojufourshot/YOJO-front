@@ -1,6 +1,16 @@
 .result_content_background{
-	background-color:rgba(200, 236, 163, 0.649);
 	display: block;
+
+	border-image: linear-gradient(to right, #f6f881be, #ffa1e9aa, #84dcffaa);
+    border-image-slice: 1;
+
+
+	border-top: 5px solid ;
+	border-bottom: 5px solid ;
+
+	margin-bottom: 10px;
+	padding: 20px;
+	
 }
 .result_title{
 	height: 10%;
@@ -8,9 +18,10 @@
 	display: flex;
   	justify-content: center;
   	align-items:center; 
-	
 	font-size: 40px;
-	border-bottom: 1px solid black;
+
+	margin-bottom: 100px;
+	
 }
   
 .result_content{
@@ -21,6 +32,5 @@
 	place-items: center;
 	gap: 10px 10px;
 	margin: 0 auto;
-	margin-top: 10px;
 	margin-bottom: 10px;
 }
