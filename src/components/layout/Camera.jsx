@@ -50,7 +50,7 @@ function Camera({ func, id }) {
 	useEffect(() => {
 		console.log('id', id)
 		setCtx(canvas.current.getContext('2d'))
-		fetch(`http://yojo.riroan.com/api/v1/cam/${id}`, {
+		fetch(`https://yojo.riroan.com/api/v1/cam/${id}`, {
 			method: 'GET',
 			headers: {
 				Accept: 'application/json',
