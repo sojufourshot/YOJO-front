@@ -1,27 +1,53 @@
-import React, { useState } from 'react'
-import { useParams,useNavigate } from 'react-router-dom'
-import Button from '@mui/material/Button'
-import '../../style/Cam.css'
-import Camera from '../../components/layout/Camera'
+import React, { useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import Button from "@mui/material/Button";
+import "../../style/Cam.css";
+import Camera from "../../components/layout/Camera";
+import axios from "axios";
 
 const Cam = () => {
-
 	const nav = useNavigate();
-	const { id } = useParams()
-	const title = `자세 ${id}`
-	const [img, setImg] = useState('')
-	
+	const { id } = useParams();
+	const title = `자세 ${id}`;
+	const [img, setImg] = useState("");
 	const send = () => {
-
-		console.log(img);//img= 지금 찍은 사진 링크
+		console.log(img); //img= 지금 찍은 사진 링크
 		nav(`/`);
+	};
+
+	const onSubmit = async () => {
+		const file = DataURIToBlob(img);
+		const formData = new FormData();
+		formData.append("upload", file, "image.jpg");
+		console.log(formData);
+		for (const keyValue of formData) console.log(keyValue); // ["img", File] File은 객체
+		await axios
+			.post("http://localhost:5500/api/v1/images", formData, { withCredentials: true })
+			.then((res) => {
+				console.log(res);
+			})
+			.catch((err) => {
+				console.log(err);
+			});
+		alert("서버에 등록이 완료되었습니다!");
+	};
+
+	function DataURIToBlob(dataURI) {
+		const splitDataURI = dataURI.split(",");
+		const byteString = splitDataURI[0].indexOf("base64") >= 0 ? atob(splitDataURI[1]) : decodeURI(splitDataURI[1]);
+		const mimeString = splitDataURI[0].split(":")[1].split(";")[0];
+
+		const ia = new Uint8Array(byteString.length);
+		for (let i = 0; i < byteString.length; i++) ia[i] = byteString.charCodeAt(i);
+
+		return new Blob([ia], { type: mimeString });
 	}
 	return (
 		<div className="background">
 			<div className="title">{title}</div>
 			<hr />
-			{img === '' ? (
-				<Camera id = {id} func={image => setImg(image)} />
+			{img === "" ? (
+				<Camera id={id} func={(image) => setImg(image)} />
 			) : (
 				<div>
 					<div className="image">
@@ -31,7 +57,7 @@ const Cam = () => {
 					<div className="buttonSet">
 						<Button
 							onClick={() => {
-								setImg('')
+								setImg("");
 							}}
 							sx={{ m: 0.5 }}
 							className="button"
@@ -41,7 +67,7 @@ const Cam = () => {
 						</Button>
 						<Button
 							onClick={() => {
-								send()
+								onSubmit();
 							}}
 							sx={{ m: 0.5 }}
 							className="button"
@@ -53,7 +79,7 @@ const Cam = () => {
 				</div>
 			)}
 		</div>
-	)
-}
+	);
+};
 
-export default Cam
+export default Cam;
