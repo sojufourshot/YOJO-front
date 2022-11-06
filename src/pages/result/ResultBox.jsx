@@ -7,6 +7,12 @@ import "../../style/ResultBox.css";
 		const [hover, setHover] = useState(0);
 		
 		
+		const refine = (time)=>{
+			const [a,b] = time.split("T")
+			const [year, month, day] = a.split("-")
+			const [hour, minute, second] = b.split(":")
+			return `${year}-${month}-${day} ${hour}:${minute}`
+		}
 
 		
 		
@@ -20,7 +26,7 @@ import "../../style/ResultBox.css";
 					{hover ? (
 						<div className="R_item_box_hover">
 							<img className="R_item_box_img_hover" src={src} />
-							<div className="R_item_text_hover"> Date: {time}<br></br>Score: {score} </div>
+							<div className="R_item_text_hover"> Date: {refine(time)}<br></br>Score: {Math.floor(score * 100) / 100} </div>
 						</div>
 
 					) :

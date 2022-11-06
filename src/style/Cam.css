@@ -1,14 +1,18 @@
 .background {
-	height: 1000px;
 	width: 70%;
-	margin: 0 auto;
+	margin: 30px auto;
 	z-index: -20;
+  	justify-content: center;
+  	align-items:center;
+
+	border: 1px solid black;
 }
 
 .title{
 	font-weight: 700;
 	font-size : 30px;
-	margin-left : 30px;
+	/* margin-left : 30px; */
+	text-align: center;
 }
 
 .image{

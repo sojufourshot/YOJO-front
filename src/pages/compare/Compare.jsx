@@ -15,6 +15,14 @@ const Compare = () => {
 	const child =state.item;
 	console.log(parent_img)
 	const nav = useNavigate();
+
+	const refine = (time)=>{
+		const [a,b] = time.split("T")
+		const [year, month, day] = a.split("-")
+		const [hour, minute, second] = b.split(":")
+		return `${year}-${month}-${day} ${hour}:${minute}`
+	}
+
 	
 	
 
@@ -45,11 +53,11 @@ const Compare = () => {
 					</div>
 
 					<div className="compare_date">
-						Upload: {child.time}
+						Upload: {refine(child.time)}
 					</div>
 
 					<div className="compare_part2">
-						<div>Score: {child.score} 점</div>
+						<div>Score: {Math.floor(child.score * 100) / 100} 점</div>
 					</div>
 			</div>
 		</div>

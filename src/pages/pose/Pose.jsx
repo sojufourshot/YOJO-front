@@ -13,8 +13,9 @@ const Pose = () => {
 	const [items, setItems] = useState([]);
 
 	useEffect(() => {
-		axios.get("/data/images.json").then((data) => {
+		axios.get("https://yojo.riroan.com/api/v1/images/0").then((data) => {
 			setItems(data.data.position);
+			console.log(data)
 		});
 	}, [setItems]);
 
