@@ -3,12 +3,13 @@ import { useEffect, useState } from "react";
 import "../../style/uploadpage.css";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
+import x from "../../assets/images/x.png";
 import axios from "axios";
 
 const UploadPage = () => {
 	const [image, setImage] = useState({
 		image_file: "",
-		preview_URL: "../../assets/images/soju.jpeg",
+		preview_URL: x,
 	});
 
 	const msg = {
@@ -36,7 +37,7 @@ const UploadPage = () => {
 		URL.revokeObjectURL(image.preview_URL);
 		setImage({
 			image_file: "",
-			preview_URL: "img/default_image.png",
+			preview_URL: x,
 		});
 	};
 
@@ -57,17 +58,18 @@ const UploadPage = () => {
 			console.log(formData); // FormData {}
 			for (const keyValue of formData) console.log(keyValue); // ["img", File] File은 객체
 			await axios
-				.post('https://yojo.riroan.com/api/v1/images', formData, { withCredentials: true })
-				.then(res => {
-					console.log(res)
+
+				.post("http://localhost:5500/api/v1/images", formData, { withCredentials: true })
+				.then((res) => {
+					console.log(res);
 				})
-				.catch(err => {
-					console.log(err)
-				})
+				.catch((err) => {
+					console.log(err);
+				});
 			alert("서버에 등록이 완료되었습니다!");
 			setImage({
 				image_file: "",
-				preview_URL: "img/default_image.png",
+				preview_URL: x,
 			});
 		} else {
 			alert("사진을 등록하세요!");
