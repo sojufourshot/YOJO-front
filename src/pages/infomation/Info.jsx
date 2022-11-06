@@ -33,7 +33,7 @@ const Info = () => {
 
 			<div className="info_in">
 
-				<div className="info_title">{pose_Info.title}</div>
+				{/* <div className="info_title">{pose_Info.title}</div> */}
 				
 				<section className="info_section1">
 					<div className="section1_part1">
@@ -41,6 +41,7 @@ const Info = () => {
 					</div>
 
 					<div className="section1_part2">
+						<div className="info_title">{pose_Info.title}</div>
 						<div className="info_author"> <div className="info_author_img" /> {pose_Info.author} </div>
 						<div className="info_content"> {pose_Info.content}</div>
 					</div>
