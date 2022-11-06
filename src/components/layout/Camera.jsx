@@ -48,10 +48,11 @@ function Camera({ func, id }) {
 	}, [webcamRef]);
 
 	useEffect(() => {
-		console.log("id", id);
-		setCtx(canvas.current.getContext("2d"));
-		fetch(`http://yojo.riroan.com/api/v1/cam/${id}`, {
-			method: "GET",
+
+		console.log('id', id)
+		setCtx(canvas.current.getContext('2d'))
+		fetch(`https://yojo.riroan.com/api/v1/cam/${id}`, {
+			method: 'GET',
 			headers: {
 				Accept: "application/json",
 				"Content-Type": "application/json",
