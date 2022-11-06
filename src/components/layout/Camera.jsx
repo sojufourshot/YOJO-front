@@ -178,7 +178,7 @@ function Camera({ func, id }) {
 					min={0.5}
 					max={0.9}
 				/>
-				<ThemeProvider>
+				{/* <ThemeProvider> */}
 					<Button
 						className="button"
 						color="primary"
@@ -193,7 +193,7 @@ function Camera({ func, id }) {
 					>
 						사진 촬영
 					</Button>
-				</ThemeProvider>
+				{/* </ThemeProvider> */}
 				{flag && <div className="second">{second}</div>}
 			</div>
 		</div>

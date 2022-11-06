@@ -18,6 +18,7 @@ import "../../style/Box.css";
 
 						{hover ? (
 						<div className="item_box_hover" >
+							
 							<img className="item_box_img_hover" src={src} />
 							<div className="item_box_text">{title}</div>
 						</div>

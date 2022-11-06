@@ -26,8 +26,9 @@ const Result = () => {
 	const [items, setItems] = useState([]);
 
 	useEffect(() => {
-		axios.get("/data/upload.json").then((data) => {
+		axios.get(`https://yojo.riroan.com/api/v1/images/result/${[pose_Info.title]}`).then((data) => {
 			setItems(data.data.result);
+			console.log(data)
 		});
 	}, [setItems]);
 

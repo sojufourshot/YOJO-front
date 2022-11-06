@@ -1,11 +1,21 @@
 import React, { useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useLocation,useParams, useNavigate } from "react-router-dom";
 import Button from "@mui/material/Button";
 import "../../style/Cam.css";
 import Camera from "../../components/layout/Camera";
 import axios from "axios";
 
 const Cam = () => {
+
+	const { state } = useLocation();
+
+	const pose_Info={
+        id:state.id,
+        title:state.title,
+        author:state.author,
+        content:state.content,
+        src:state.src
+    }
 	const nav = useNavigate();
 	const { id } = useParams();
 	const title = `자세 ${id}`;
@@ -18,11 +28,13 @@ const Cam = () => {
 	const onSubmit = async () => {
 		const file = DataURIToBlob(img);
 		const formData = new FormData();
-		formData.append("upload", file, "image.jpg");
+		formData.append("image", file);
+		formData.append("poseType", "orig");
+		formData.append("poseName", pose_Info.title);
 		console.log(formData);
 		for (const keyValue of formData) console.log(keyValue); // ["img", File] File은 객체
 		await axios
-			.post("http://localhost:5500/api/v1/images", formData, { withCredentials: true })
+			.post("https://yojo.riroan.com/api/v1/images", formData, { withCredentials: true })
 			.then((res) => {
 				console.log(res);
 			})
@@ -44,10 +56,11 @@ const Cam = () => {
 	}
 	return (
 		<div className="background">
-			<div className="title">{title}</div>
+			{/* <div>{pose_Info.title}</div> */}
+			<div className="title">{pose_Info.title}</div>
 			<hr />
 			{img === "" ? (
-				<Camera id={id} func={(image) => setImg(image)} />
+				<Camera id={pose_Info.id} func={(image) => setImg(image)} />
 			) : (
 				<div>
 					<div className="image">

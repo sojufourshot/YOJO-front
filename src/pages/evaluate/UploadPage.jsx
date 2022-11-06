@@ -2,11 +2,22 @@ import React from "react";
 import { useEffect, useState } from "react";
 import "../../style/uploadpage.css";
 import { Button } from "@mui/material";
-import { Link } from "react-router-dom";
+import { useLocation, useNavigate, Link } from "react-router-dom";
 import x from "../../assets/images/x.png";
 import axios from "axios";
 
 const UploadPage = () => {
+
+	const { state } = useLocation();
+
+	const pose_Info={
+        id:state.id,
+        title:state.title,
+        author:state.author,
+        content:state.content,
+        src:state.src
+    }
+
 	const [image, setImage] = useState({
 		image_file: "",
 		preview_URL: x,
@@ -53,13 +64,13 @@ const UploadPage = () => {
 			const formData = new FormData();
 			formData.append("image", image.image_file);
 			formData.append("poseType", "orig");
-			formData.append("poseName", "활자세");
+			formData.append("poseName", pose_Info.title);
 			console.log(image.image_file);
 			console.log(formData); // FormData {}
 			for (const keyValue of formData) console.log(keyValue); // ["img", File] File은 객체
 			await axios
 
-				.post("http://localhost:5500/api/v1/images", formData, { withCredentials: true })
+				.post("https://yojo.riroan.com/api/v1/images", formData, { withCredentials: true })
 				.then((res) => {
 					console.log(res);
 				})
@@ -75,6 +86,7 @@ const UploadPage = () => {
 			alert("사진을 등록하세요!");
 		}
 	};
+	
 
 	return (
 		<div className="uploader-wrapper">

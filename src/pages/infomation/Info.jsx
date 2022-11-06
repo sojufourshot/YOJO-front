@@ -17,7 +17,7 @@ const Info = () => {
 	const nav = useNavigate();
 
 	const nav_cam = () => {
-		nav(`/cam/${pose_Info.id}`);
+		nav(`/cam/${pose_Info.id}`, { state: pose_Info });
 	};
 
 	const nav_result = () => {
@@ -25,7 +25,7 @@ const Info = () => {
 	};
 
 	const nav_upload = () => {
-		nav(`/evaluate/upload`);
+		nav(`/evaluate/upload`,{ state: pose_Info });
 	};
 
 	return (
