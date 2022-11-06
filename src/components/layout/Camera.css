@@ -1,20 +1,20 @@
 .container {
-    display:flex;
-    flex-direction : column;
-    justify-content: center;
-    align-items : center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
-.captured{
-    background-color : white;
+.captured {
+	background-color: white;
 }
 
-.uncaptured{
-    background-color: none;
-    transition : all 0.1s;
+.uncaptured {
+	background-color: none;
+	transition: all 0.1s;
 }
 
-.second{
-    font-weight: 700;
-    font-size: 30px;
+.second {
+	font-weight: 700;
+	font-size: 30px;
 }

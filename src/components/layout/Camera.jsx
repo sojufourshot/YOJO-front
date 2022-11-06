@@ -2,7 +2,21 @@ import React, { useEffect, useRef, useState, useCallback } from "react";
 import Webcam from "react-webcam";
 import Slider from "@mui/material/Slider";
 import Button from "@mui/material/Button";
+import { createTheme, ThemeProvider } from "@mui/material";
 import "./Camera.css";
+
+const theme = createTheme({
+	palette: {
+		primary: {
+			// Purple and green play nicely together.
+			main: "#000000",
+		},
+		secondary: {
+			// This is green.A700 as hex.
+			main: "#11cb5f",
+		},
+	},
+});
 
 const videoConstraints = {
 	// resolution
@@ -146,11 +160,12 @@ function Camera({ func, id }) {
 	return (
 		<div>
 			<div className="container">
-				<img style={{ margin: 10 }} src={`http://yojo.riroan.com/images/orig/${id}.jpg`} alt="alt" width={(width * 2) / 3} height={(height * 2) / 3} />
+				<img style={{ margin: 20, height: 360, width: 640 }} src={`http://yojo.riroan.com/images/orig/${id}.jpg`} alt="alt" width={(width * 2) / 3} height={(height * 2) / 3} />
 				<div style={{ display: "flex", position: "relative" }}>
 					<canvas className={cap ? "captured" : "uncaptured"} ref={canvas} width={width} height={height} />
 					<Webcam mirrored ref={webcamRef} style={{ position: "absolute", left: 0, top: 0, zIndex: -1 }} audio={false} height={height} screenshotFormat="image/jpeg" width={width} videoConstraints={videoConstraints} />
 				</div>
+
 				<Slider
 					style={{ width: width, margin: "20px" }}
 					value={ratio}
@@ -162,18 +177,22 @@ function Camera({ func, id }) {
 					min={0.5}
 					max={0.9}
 				/>
-				<Button
-					className="button"
-					disabled={second !== -1}
-					style={{ display: "block", width: width, marginTop: 10, marginBottom: 10 }}
-					onClick={() => {
-						setSecond(1);
-						setFlag(true);
-					}}
-					variant="contained"
-				>
-					Capture
-				</Button>
+				<ThemeProvider>
+					<Button
+						className="button"
+						color="primary"
+						theme={theme}
+						disabled={second !== -1}
+						style={{ display: "block", width: width, marginTop: 10, marginBottom: 10 }}
+						onClick={() => {
+							setSecond(5);
+							setFlag(true);
+						}}
+						variant="contained"
+					>
+						사진 촬영
+					</Button>
+				</ThemeProvider>
 				{flag && <div className="second">{second}</div>}
 			</div>
 		</div>
