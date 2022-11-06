@@ -23,6 +23,7 @@ const UploadPage = () => {
 		if (e.target.files[0]) {
 			// 새로운 이미지를 올리면 createObjectURL()을 통해 생성한 기존 URL을 폐기
 			URL.revokeObjectURL(image.preview_URL);
+			console.log("target", e.target.files[0])
 			const preview_URL = URL.createObjectURL(e.target.files[0]);
 			setImage(() => ({
 				image_file: e.target.files[0],
@@ -53,9 +54,11 @@ const UploadPage = () => {
 			formData.append("image", image.image_file);
 			formData.append("poseType", "orig");
 			formData.append("poseName", "활자세");
+			console.log(image.image_file);
 			console.log(formData); // FormData {}
 			for (const keyValue of formData) console.log(keyValue); // ["img", File] File은 객체
 			await axios
+
 				.post("http://localhost:5500/api/v1/images", formData, { withCredentials: true })
 				.then((res) => {
 					console.log(res);

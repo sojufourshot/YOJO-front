@@ -31,6 +31,8 @@ const Result = () => {
 		});
 	}, [setItems]);
 
+	
+
 
 	return (
 		<div>
