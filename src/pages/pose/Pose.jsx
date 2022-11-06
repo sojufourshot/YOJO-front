@@ -20,7 +20,7 @@ const Pose = () => {
 
 
 	return (
-		<div>
+		
 			<div className="main_content_background">
 				<div className="main_content">
 
@@ -31,7 +31,7 @@ const Pose = () => {
 					
 				</div>
 			</div>
-		</div>
+		
 	);
 };
 
